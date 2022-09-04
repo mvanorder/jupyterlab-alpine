@@ -1,7 +1,7 @@
-FROM python:alpine
+FROM python:3.9-alpine3.15
 
 # Install required packages
-RUN apk add --update --virtual=.build-dependencies alpine-sdk nodejs ca-certificates musl-dev gcc python-dev make cmake g++ gfortran libpng-dev freetype-dev libxml2-dev libxslt-dev
+RUN apk add --update --virtual=.build-dependencies alpine-sdk nodejs ca-certificates musl-dev gcc make python3-dev cmake g++ gfortran libpng-dev freetype-dev libxml2-dev libxslt-dev linux-headers
 RUN apk add --update git
 
 # Install Jupyter
